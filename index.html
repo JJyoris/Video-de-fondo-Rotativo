@@ -1,0 +1,77 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Video Rotativo</title>
+
+    <!-- El siguiente script es un llamado a una librería jquery para que nuestro reproductor se visualice-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+ 
+
+
+    <!-- estilos aquí encontrarás la animación del loader y la apariencia de la página -->
+    <link rel="stylesheet" href="styles/main.css">
+    
+    <!-- scripts -->
+    
+    <script>
+
+          /* Aquí abriremos una función de jQuery para iniciar el reproductor */
+        jQuery(function () {
+            
+
+            /* Aquí iniciamos el reproductor */
+            var myPlayer = jQuery(".player").YTPlayer();
+        });
+
+    </script>
+  </head>
+
+  <body class="dark">
+    
+    <!-- Aquí podemos hacer un llamado a un LOADER -->
+    <div id="mask">
+        <div class="loader-minimal"></div>
+    </div>
+    
+    <header>
+      
+    </header>
+
+    <!-- Aquí desarrollamos la variable para los videos, el link lo tomarán de Youtube
+     Ej: https://www.youtube.com/watch?v=tT5FvbVHq70 tomaremos: tT5FvbVHq70,
+     para llamar el video que deseamos se reproduzca -->
+
+    <script>
+    var videos = ["xVdoEiAZm58", "jAwVFjfirQw", "Fa_V1GERoXM", "dWBbbz8dGgg", "BMQOlUZ2jaI"];
+    var rndVideo = videos[Math.floor(Math.random() * videos.length)];
+</script>
+<a class="player" data-property="{videoURL:rndVideo,containment:'body',autoPlay:true, mute:true, startAt:0,opacity:1,ratio:'4/3', addRaster:false, showControls:false,}"></a>
+
+
+
+
+
+
+
+
+
+    <!-- Este es el plugin de nuestros videos en el están los controladores -->
+    <script src="scripts/plugin/YTPlayer.js"></script>
+
+    <script src="scripts/main.js"></script>
+
+    <script src="scripts/btp/bootstrap.js"></script>
+
+  
+
+</body>
+</html>
+
+
+
+<!-- Muchas gracias por ver, cualquier ayuda a perfeccionar el codigo es bienvenida
+espero les sirva de mucho https://github.com/JJyoris -->
